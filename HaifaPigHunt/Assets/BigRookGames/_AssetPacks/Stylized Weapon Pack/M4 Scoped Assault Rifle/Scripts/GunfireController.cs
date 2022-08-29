@@ -61,6 +61,7 @@ namespace BigRookGames.Weapons
             if (Input.GetMouseButtonDown(0))
             {
                 GetComponent<Animator>().Play("Shoot");
+                CamShake.shakeDuration = 0.1f;
                 CamShake.enabled = false;
                 CamShake.enabled = true;
                 FireWeapon();
