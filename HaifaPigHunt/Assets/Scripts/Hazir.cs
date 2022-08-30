@@ -50,7 +50,12 @@ public class Hazir : MonoBehaviour
         Vector3 Dir = Vector3.Normalize(Player.transform.position - transform.position);
         //rb.velocity = new Vector3(Dir.x, rb.velocity.y, Dir.z) * SpeedOffMoving * Time.deltaTime;
         //rb.MovePosition(transform.position + ((Vector3.Normalize(Player.transform.position - transform.position) * SpeedOffMoving * Time.deltaTime)));
+        int rand = Random.RandomRange(0, 2);
+
+        if(rand == 0)      
         Anim.SetBool("Follow", true);
+        else
+        Anim.SetBool("Trot", true);
     }
 
     void CheckForAttack()
@@ -80,6 +85,7 @@ public class Hazir : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.velocity = rb.velocity;
             Anim.SetBool("Follow", false);
+            Anim.SetBool("Trot", false);
         }
     }
 

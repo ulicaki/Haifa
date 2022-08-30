@@ -46,7 +46,7 @@ public class SFPSC_PlayerMovement : MonoBehaviour
     private SFPSC_WallRun wallRun;
     private SFPSC_GrapplingHook grapplingHook;
 
-    [SerializeField] GameObject LandEffect;
+    
 
     [Header("Sound")]
     [SerializeField] AudioClip[] FootStepSound;
@@ -96,8 +96,11 @@ public class SFPSC_PlayerMovement : MonoBehaviour
     private Vector3 inputForce;
     private int i = 0;
     private float prevY;
+
     private void FixedUpdate()
     {
+
+
         if ((wallRun != null && wallRun.IsWallRunning) || (grapplingHook != null && grapplingHook.IsGrappling))
             isGrounded = false;
         else
@@ -108,6 +111,7 @@ public class SFPSC_PlayerMovement : MonoBehaviour
             isGrounded = (Mathf.Abs(rb.velocity.y - prevY) < .1f) && (Physics.OverlapSphere(groundChecker.position, groundCheckerDist).Length > 1); // > 1 because it also counts the player
             prevY = rb.velocity.y;
         }
+
 
         // Input
         vInput = Input.GetAxisRaw("Vertical");

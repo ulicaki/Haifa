@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     [SerializeField] AudioSource AS;
     [SerializeField] GameObject CameraCam;
     [SerializeField] Transform CameraFarLook;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] GameObject SpeedEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +60,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (rb.velocity.magnitude > 40)
+            SpeedEffect.SetActive(true);
+        else
+            SpeedEffect.SetActive(false);
+   
         if(Input.GetMouseButtonDown(0))
         {
             if(ActiveWepone == WeponeActive.DuckWepone)

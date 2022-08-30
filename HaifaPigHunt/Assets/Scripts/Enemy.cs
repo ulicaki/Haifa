@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject BloodEffect;
     [SerializeField] GameObject Damage5;
     [SerializeField] GameObject Damage10;
+    [SerializeField] GameObject Damage30;
     // Start is called before the first frame update
 public void GetHit (int damage,Vector3 Pos)
     {
@@ -17,6 +18,9 @@ public void GetHit (int damage,Vector3 Pos)
             Instantiate(Damage5, Pos, Quaternion.identity);
         else if (damage == 10)
             Instantiate(Damage10, Pos, Quaternion.identity);
+        else if (damage == 30)
+            Instantiate(Damage30, Pos, Quaternion.identity);
+
         Health -= damage;
         Instantiate(BloodEffect, Pos, Quaternion.identity);
         if(Health <= 0)
