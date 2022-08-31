@@ -8,6 +8,7 @@ public class Hazir : MonoBehaviour
     [SerializeField] GameObject Player;
     [SerializeField] float SpeedOffMoving;
     [SerializeField] float RotationSpeed;
+    [SerializeField] float KickPower;
     Animator Anim;
     Rigidbody rb;
     bool StartFollow;
@@ -82,8 +83,7 @@ public class Hazir : MonoBehaviour
         else
         {
             StartFollow = false;
-            rb.velocity = Vector3.zero;
-            rb.velocity = rb.velocity;
+
             Anim.SetBool("Follow", false);
             Anim.SetBool("Trot", false);
         }
@@ -98,6 +98,9 @@ public class Hazir : MonoBehaviour
             if (DoHitBool)
             {
                 Player.gameObject.GetComponent<Player>().GetHit();
+                Vector3 dir = Player.transform.position - transform.position;
+                dir = new Vector3(dir.x, dir.y + 5, dir.z);
+                Player.gameObject.GetComponent<Rigidbody>().AddForce(dir * KickPower);
                 yield return new WaitForSeconds(0.5f);
             }
             i++;

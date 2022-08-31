@@ -5,6 +5,7 @@ namespace BigRookGames.Weapons
     public class GunfireController : MonoBehaviour
     {
         [SerializeField] int damage;
+        [SerializeField] float FirePower;
         // --- Audio ---
         public AudioClip GunShotClip;
         public AudioSource source;
@@ -88,6 +89,13 @@ namespace BigRookGames.Weapons
             if (Physics.Raycast(ray, out hit))
             {
                 Instantiate(RikoshetEffect, hit.point, Quaternion.identity);
+
+                if(hit.transform.gameObject.GetComponent<Rigidbody>() != null)
+                {
+                    Vector3 dir = hit.transform.position- transform.position ;
+                    hit.transform.gameObject.GetComponent<Rigidbody>().AddForce(dir.normalized * FirePower);
+                }    
+
                 if(hit.transform.gameObject.CompareTag("Enemy"))
                 {
                     int rand = Random.RandomRange(0, 2);
