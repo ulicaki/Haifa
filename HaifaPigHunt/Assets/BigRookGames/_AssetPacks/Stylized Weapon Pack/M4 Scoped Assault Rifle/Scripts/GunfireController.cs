@@ -40,6 +40,7 @@ namespace BigRookGames.Weapons
         [SerializeField] CameraShake CamShake;
         [SerializeField] GameObject RikoshetEffect;
         [SerializeField] Camera cam;
+        [SerializeField] Player PlayerObj;
         
 
         private void Start()
@@ -59,10 +60,11 @@ namespace BigRookGames.Weapons
             }
 
             // --- Fires the weapon if the delay time period has passed since the last shot ---
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && PlayerObj.bullets > 0)
             {
                 GetComponent<Animator>().Play("Shoot");
                 CamShake.shakeDuration = 0.1f;
+                CamShake.shakeAmount = 0.5f;
                 CamShake.enabled = false;
                 CamShake.enabled = true;
                 FireWeapon();
@@ -114,12 +116,12 @@ namespace BigRookGames.Weapons
             timeLastFired = Time.time;
 
             // --- Spawn muzzle flash ---
-            var flash = Instantiate(muzzlePrefab, muzzlePosition.transform);
+            var flash = Instantiate(muzzlePrefab, muzzlePosition.transform.position, muzzlePosition.transform.rotation);
 
             // --- Shoot Projectile Object ---
             if (projectilePrefab != null)
             {
-                GameObject newProjectile = Instantiate(projectilePrefab, muzzlePosition.transform.position, muzzlePosition.transform.rotation, transform);
+                GameObject newProjectile = Instantiate(projectilePrefab, muzzlePosition.transform.position, muzzlePosition.transform.rotation,transform);
             }
 
             // --- Disable any gameobjects, if needed ---
@@ -158,6 +160,7 @@ namespace BigRookGames.Weapons
                 }
             }
 
+            PlayerObj.Shoot();
             // --- Insert custom code here to shoot projectile or hitscan from weapon ---
 
         }

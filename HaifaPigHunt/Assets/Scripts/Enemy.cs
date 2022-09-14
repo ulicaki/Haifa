@@ -11,8 +11,21 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject Damage5;
     [SerializeField] GameObject Damage10;
     [SerializeField] GameObject Damage30;
+
+    [Header("Ragdoll")]
+    [SerializeField] BoxCollider MainCollider;
+    [SerializeField] Rigidbody HeadRig;
+    [SerializeField] Rigidbody BodyRig;
+    [SerializeField] Rigidbody Leg1_1Rig;
+    [SerializeField] Rigidbody Leg1_2Rig;
+    [SerializeField] Rigidbody Leg2_1Rig;
+    [SerializeField] Rigidbody Leg2_2Rig;
+    [SerializeField] Rigidbody Leg3_1Rig;
+    [SerializeField] Rigidbody Leg3_2Rig;
+    [SerializeField] Rigidbody Leg4_1Rig;
+    [SerializeField] Rigidbody Leg4_2Rig;
     // Start is called before the first frame update
-public void GetHit (int damage,Vector3 Pos)
+    public void GetHit (int damage,Vector3 Pos)
     {
         if(damage ==5)
             Instantiate(Damage5, Pos, Quaternion.identity);
