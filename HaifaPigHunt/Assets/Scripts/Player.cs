@@ -281,6 +281,7 @@ public class Player : MonoBehaviour
                 DuckGun.SetActive(false);
                 BulletPanel.SetActive(true);
                 BulletText.text = "" + bullets;
+                ActiveWepone = WeponeActive.none;
                 break;
             case 4:
                 WeponeOn = true;
@@ -289,6 +290,7 @@ public class Player : MonoBehaviour
                 FlareGun.SetActive(false);
                 DuckGun.SetActive(false);
                 BulletPanel.SetActive(true);
+                ActiveWepone = WeponeActive.none;
                 BulletText.text = "" + bullets;
                 break;
             case 5:
@@ -300,6 +302,7 @@ public class Player : MonoBehaviour
                 DuckGun.SetActive(false);
                 BulletPanel.SetActive(true);
                 BulletText.text = "" + bullets;
+                ActiveWepone = WeponeActive.none;
                 break;
         }
     }
@@ -337,7 +340,8 @@ public class Player : MonoBehaviour
     public enum WeponeActive
     {
         Gun1,
-        DuckWepone
+        DuckWepone,
+        none
     }
 
 

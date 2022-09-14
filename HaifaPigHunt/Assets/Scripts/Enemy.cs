@@ -13,17 +13,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject Damage30;
 
     [Header("Ragdoll")]
-    [SerializeField] BoxCollider MainCollider;
-    [SerializeField] Rigidbody HeadRig;
-    [SerializeField] Rigidbody BodyRig;
-    [SerializeField] Rigidbody Leg1_1Rig;
-    [SerializeField] Rigidbody Leg1_2Rig;
-    [SerializeField] Rigidbody Leg2_1Rig;
-    [SerializeField] Rigidbody Leg2_2Rig;
-    [SerializeField] Rigidbody Leg3_1Rig;
-    [SerializeField] Rigidbody Leg3_2Rig;
-    [SerializeField] Rigidbody Leg4_1Rig;
-    [SerializeField] Rigidbody Leg4_2Rig;
+    [SerializeField] CapsuleCollider MainCollider;
+    [SerializeField] CapsuleCollider HeadRig;
+    [SerializeField] CapsuleCollider BodyRig;
+    [SerializeField] CapsuleCollider Leg1;
+    [SerializeField] CapsuleCollider Leg2;
+    [SerializeField] CapsuleCollider Leg3;
+    [SerializeField] CapsuleCollider Leg4;
     // Start is called before the first frame update
     public void GetHit (int damage,Vector3 Pos)
     {
@@ -44,9 +40,28 @@ public class Enemy : MonoBehaviour
 
     void Die ()
     {
-        Instantiate(DieEffect, gameObject.transform.position, Quaternion.identity);
-        Instantiate(DieEffect2, gameObject.transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        MainCollider.enabled = false;
+        HeadRig.enabled = true;
+        BodyRig.enabled = true;
+        Leg1.enabled = true;
+        Leg2.enabled = true;
+        Leg3.enabled = true;
+        Leg4.enabled = true;
+
+        Destroy(MainCollider.gameObject.GetComponent<Rigidbody>());
+        HeadRig.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        BodyRig.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        Leg1.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        Leg2.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        Leg3.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        Leg4.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
+        Destroy(gameObject.GetComponent<Hazir>());
+        Destroy(gameObject.GetComponent<Animator>());
+        Destroy(gameObject.GetComponent<Enemy>());
+       // Instantiate(DieEffect, gameObject.transform.position, Quaternion.identity);
+       // Instantiate(DieEffect2, gameObject.transform.position, Quaternion.identity);
+       //Destroy(gameObject);
     }
 
 }
