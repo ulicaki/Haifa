@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
         Instantiate(BloodEffect, Pos, Quaternion.identity);
         if(Health <= 0)
         {
+            GameObject.FindGameObjectWithTag("GM").GetComponent<GM>().MinusBoar();
             Die();
         }
     }

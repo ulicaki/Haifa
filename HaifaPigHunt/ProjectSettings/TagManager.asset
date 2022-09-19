@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Animal
   - Enemy
+  - FxTemporaire
+  - GM
   layers:
   - Default
   - TransparentFX
