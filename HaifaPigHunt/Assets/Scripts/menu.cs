@@ -5,6 +5,7 @@ using UnityEngine;
 public class menu : MonoBehaviour
 {
     [SerializeField] GameObject Fader;
+    [SerializeField] GameObject Loader;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class menu : MonoBehaviour
     IEnumerator nextLevel ()
     {
         Fader.SetActive(true);
+        Loader.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         Application.LoadLevel(1);
     }

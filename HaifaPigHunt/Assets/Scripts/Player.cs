@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] GameObject SpeedEffect;
     bool WeponeOn = false;
+    [SerializeField] GM gm;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,11 +57,18 @@ public class Player : MonoBehaviour
 
     public void GetHit()
     {
+        StopCoroutine(AfterGotHit());
         GetComponent<CameraShake>().enabled = false;
         GetComponent<CameraShake>().enabled = true;
         Color NowColor = ScreenBlood.color;
         NowColor.a += 0.1f;
         ScreenBlood.color = NowColor;
+        Debug.LogError(NowColor.a);
+        if(NowColor.a >= 0.6f)
+        {
+            gm.LoseLevel();
+
+        }
         StartCoroutine(AfterGotHit());
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireGun : MonoBehaviour
 {
+    [SerializeField] bool RandDamage;
     [SerializeField] int damage;
     [SerializeField] float FirePower;
     [SerializeField] Player PlayerObj;
@@ -76,11 +77,14 @@ public class FireGun : MonoBehaviour
 
             if (hit.transform.gameObject.CompareTag("Enemy"))
             {
-                int rand = Random.RandomRange(0, 2);
-                if (rand == 0)
-                    damage = 5;
-                else
-                    damage = 10;
+                if (RandDamage)
+                {
+                    int rand = Random.RandomRange(0, 2);
+                    if (rand == 0)
+                        damage = 5;
+                    else
+                        damage = 10;
+                }
                 hit.transform.gameObject.GetComponent<Enemy>().GetHit(damage, hit.point);
             }
         }

@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullets: -1
-  MinBullet: 10
+  MinBullet: 5
   ManBullet: 30
   WeponeIndex: 5
   ScaleBig: {x: 0.1354669, y: 0.1354669, z: 0.1354669}
