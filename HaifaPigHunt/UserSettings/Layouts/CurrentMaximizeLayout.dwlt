@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 234
     height: 732
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -225,9 +225,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 421eecffb011ecff2e0cecff1207ecff2404ecff4401ecff64fdebff4ef5ebff36efebff
-      m_LastClickedID: -1315018
-      m_ExpandedIDs: d820ecffa420eeffe821eeff3e22eeffd25deefff25deeff4233efff28fdf0ffba3df1ff8662f1ff8c81f3ff9a1df4ffaa36f4ffc836f4ffcc36f4ffea36f4ffee36f4fff236f4ff2e37f4ff3637f4ff5437f4ffe645f4ff3ea2f5ffcc16f6ffd016f6ff1441f6ff1841f6ff1c0df8ffdc21feffe021feff6a39feffa039feffa439feff5a6efeff5e6efeff5a80feff4685feff2693feff2a93feff2c93feff0895feff7899feffc2ccfeffe6faffffa264000070d200007ad400006cf30000e6f3000026f40000acf40000baf400003ef60000a4f60000baf60000506c0a00d2cf0a0066d50a002ed60a00
+      m_SelectedIDs: 626e0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 7ae3eaffbee8eaff02e9eaff5425ebff7e25ebffd820ecffa420eeffe821eeff3e22eeffd25deefff25deeff4233efff28fdf0ffba3df1ff8662f1ff8c81f3ff9a1df4ffaa36f4ffc836f4ffcc36f4ffea36f4ffee36f4fff236f4ff2e37f4ff3637f4ff5437f4ffe645f4ff3ea2f5ffcc16f6ffd016f6ff1441f6ff1841f6ff1c0df8ffdc21feffe021feff6a39feffa039feffa439feff5a6efeff5e6efeff5a80feff4685feff2693feff2a93feff2c93feff0895feff7899feffc2ccfeffe6faffffa264000070d200007ad400006cf30000e6f3000026f40000acf40000baf400003ef60000a4f60000baf60000506c0a00d2cf0a0066d50a002ed60a00
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -657,9 +657,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -129.16151, y: -14.610933, z: 75.328}
+    m_Target: {x: 47.559505, y: -18.696726, z: -43.981228}
     speed: 2
-    m_Value: {x: -129.16151, y: -14.610933, z: 75.328}
+    m_Value: {x: 47.559505, y: -18.696726, z: -43.981228}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -706,9 +706,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.17742142, y: 0.06731579, z: -0.012247769, w: -0.98178333}
+    m_Target: {x: 0.2116776, y: -0.0062145526, z: 0.001416875, w: 0.97734976}
     speed: 2
-    m_Value: {x: -0.17741627, y: 0.06731383, z: -0.012247412, w: -0.9817548}
+    m_Value: {x: 0.21313693, y: -0.0062122317, z: 0.0014261532, w: 0.9770016}
   m_Size:
     m_Target: 34.989544
     speed: 2
@@ -806,21 +806,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Github\Haifa\Haifa\HaifaPigHunt
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 91}
-    m_SelectedIDs: 54720000
-    m_LastClickedID: 29268
+    scrollPos: {x: 0, y: 462}
+    m_SelectedIDs: 986d0000
+    m_LastClickedID: 28056
     m_ExpandedIDs: 00000000ea6c0000ec6c0000ee6c0000f26c0000f46c0000f66c0000f86c0000fa6c0000fc6c0000fe6c0000006d0000026d0000046d0000066d0000086d00000a6d00000c6d00000e6d0000106d0000126d0000166d0000186d00001a6d0000726d0000d66f000058ce000086ce000088ce00008cce0000d8ce000024cf0000201f0100464401000c450100004b010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -874,9 +874,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 421eecffb011ecff2e0cecff1207ecff2404ecff4401ecff64fdebff4ef5ebff36efebff
-    m_LastClickedInstanceID: -1302974
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 626e0000
+    m_LastClickedInstanceID: 28258
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000bc9b000022930000d8990000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -983,8 +983,8 @@ MonoBehaviour:
     y: 0
     width: 516
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
